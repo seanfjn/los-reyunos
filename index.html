@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/all.css"> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#icon').click(function () {
+                $('ul').toggleClass('show');
+            });
+        }); 
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="site-logo logo">
+            <a href="./index.html"><img src="./Images/Logo/IMG_9215.jpeg" alt=""></a>
+        </div>
+        <div class="mobile-nav">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+        <div class="site-nav-menu">
+            <ul class="primary-menu">
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./Navbar Pages/Comodidades/comodida.html">Comodidades</a></li>
+                <li><a href="./Navbar Pages/Aventura/aventura.html">Aventura</a></li>
+                <li><a href="./index.html#map__link">Como Llegar</a></li>
+                <li><a href="./Navbar Pages/Imagenes/imagenes.html">Imagenes</a></li>
+                <li><a href="./Navbar Pages/Tarifas/tarifas.html">Tarifas</a></li>
+                <li><a href="./index.html#consultasTitle">Consultas</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div id="video__content">
+        <video playsinline autoplay muted loop src="./Images/OpeningVideo.mov" alt="Video of the Area"
+            id="video"></video>
+        <div class="content">
+            <h1>Bienvenidos al Apart Hotel Los Reyunos</h1>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="main__container">
+        <div class="main__content">
+            <p class="title">Alrededores</p>
+            <br>
+            <p id="alredor__text">El lago Los Reyunos se encuentra emplazado a 43 Km. al oeste de la Ciudad de San
+                Rafael y se alimenta de las aguas del Rio Diamante.
+                Este rio, proveniente de la Cordillera de Los Andes, también provee agua a otro dique ubicado al pie
+                de la Pre Cordillera llamado Agua del Toro.
+                El Lago los Reynos cubre aproximadamente 750 hectáreas y tiene 17 km. de largo. En él se practica el
+                esqui, wakeboard, windsurf. canotaje, etc.
+                Camino a Los Reyunos nos encontramos con la Villa 25 de Mayo, considerada un verdadero museo
+                habitado, con caserios de adobe, las ruinas del fuerte
+                San Rafael del Diamante (bastión de la Campana del Desierto) y la Iglesia de Nuestra Señora del
+                Carmen (fundada en 1888), en la actualidad se pueden observar en su</p>
+        </div>
+        <div class="main__images">
+            <img style="vertical-align: middle" class="imageInicio" src="./Images/mountain_range.jpg" alt="">
+        </div>
+    </div>
+
+    <div id="sec__container">
+        <div class="main__images">
+            <img style="vertical-align: middle" class="imageInicio" src="./Images/main_patio.jpg" alt="">
+        </div>
+        <div class="sec__content">
+            <p class="title">El Apart</p>
+            <br>
+            <p id="text2">El Apart Hotel se encunetra a orillas del lago dentro del Club de Nautica y Pesca Los
+                Reyunos, 43km al oeste de la Ciudad de San Rafael.
+                El Lago Cubre aproximadamente 750 hectáreas, tiene 17km de largo y sus aguas son completamente
+                transparentes y de temperatura agradable para banarse.
+                En el Club, tipo country, los socios han construido mas de 70 casas de fin de semana. El mismo
+                cuenta con campings, pileta de natacion a orillas del lago, y un polideportivo con canchas de
+                basquet, tenis, paddle y volley.
+            </p>
+        </div>
+    </div>
+
+    <div id="map__link">
+        <a href="map__link">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.0616905256265!2d-68.71374988450444!3d-34.577305563608725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9679709cef383a89%3A0x961289a14a686443!2sApart%20Hotel%20Los%20Reyunos!5e0!3m2!1sen!2sus!4v1674365643026!5m2!1sen!2sus"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </a>
+    </div>
+
+    <!-- <hr id="line"> -->
+
+    <form action="./Navbar Pages/Consultas/consultas.php" method="post">
+        <div class="sub-entry">
+            <h2 id="consultasTitle">Consultas</h2>
+            <label for="name">Nombre y Apellido:</label>
+            <input type="text" placeholder="Juan Carlos" id="name" name="name" required><br><br>
+
+            <label for="phoneNumber">Teléfono:</label>
+            <input type="tel" placeholder="123-4567-890" id="phoneNumber" name="phoneNumber" required><br><br>
+
+            <label for="email">E-mail:</label>
+            <input type="email" placeholder="ejemplo@gmail.com" name="email" id="email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" size="30" required /><br><br>
+
+            <label for="dateReservation">Fecha aproximada de reserva:</label>
+            <input type="date" name="dateReservation" rows="4" cols="50" required></input>
+            <br>
+            <br>
+
+            <label for="dayCount">Cantidad de días:</label>
+            <select name="dayCount" id="amountOfDays">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6+</option>
+            </select>
+            <br>
+            <br>
+
+            <label for="peopleStaying">Cantidad de personas:</label>
+            <select name="peopleStaying" id="peopleStaying">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6+</option>
+            </select>
+            <br>
+            <br>
+
+            <label for="hearOfUs">Nos conoció por:</label>
+            <select name="hearOfUs" id="hearOfUs">
+                <option value="sanRafael">San Rafael Tour</option>
+                <option value="buscador">Buscador</option>
+                <option value="publicidadG">Publicidad Gráfica</option>
+                <option value="amigo">Un amigo</option>
+                <option value="otros">Otros...</option>
+            </select>
+            <br><br>
+
+            <label for="message">Comentarios:</label><br>
+            <textarea id="message" placeholder="Tengo una pregunta..." name="message"></textarea><br><br>
+            <!-- rows="3" cols="50" -->
+            <input type="submit" value="Send" id="submitForm">
+        </div>
+        <div class="sub-entry sub-entry-image">
+            <img src="./Images/admin_area.jpg" alt="">
+        </div>
+    </form>
+    <div>
+        <img src="/Images/logo.jpg" class="cutler" alt="">
+    </div>
+    </div>
+
+    <footer>
+        <div class="footerItem"><i class="fa fa-phone" aria-hidden="true"></i>+54 260 468-2007</div>
+        <div class="footerItem"><i class="fa fa-map-marker" aria-hidden="true"></i>Club de Náutica y Pesca Los
+            Reyunos, San
+            Rafael, Mendoza,
+            Argentina</div>
+        <div class="footerItem"><i class="fa fa-envelope" aria-hidden="true"></i>apartlosreyunos@hotmail.com</div>
+    </footer>
+    <script src="app.js" charset="utf-8"></script>
+    <script>
+        $(document).ready(function () {
+            $(".mobile-nav i").click(function () {
+                $(".site-nav-menu").toggleClass("mobile-menu");
+            });
+        })
+    </script>
+</body>
+
+</html>

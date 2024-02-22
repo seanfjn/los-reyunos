@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aventura</title>
+    <link rel="stylesheet" href="aventura.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#icon').click(function () {
+                $('ul').toggleClass('show');
+            });
+        }); 
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="site-logo logo">
+            <a href="../../index.html"><img src="../../Images/Logo/IMG_9215.jpeg" alt=""></a>
+        </div>
+        <div class="mobile-nav">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+        <div class="site-nav-menu">
+            <ul class="primary-menu">
+                <li><a href="../../index.html">Inicio</a></li>
+                <li><a href="../Comodidades/comodida.html">Comodidades</a></li>
+                <li><a href="../Aventura/aventura.html">Aventura</a></li>
+                <li><a href="../../index.html#map__link">Como Llegar</a></li>
+                <li><a href="../Imagenes/imagenes.html">Imagenes</a></li>
+                <li><a href="../Tarifas/tarifas.html">Tarifas</a></li>
+                <li><a href="../../index.html#consultasTitle">Consultas</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div id="video__content">
+        <img id="aventura_image" src="../../Images/panorama-min.jpg" alt="">
+        <div class="content">
+            <h1>Aventura</h1>
+        </div>
+    </div>
+
+    <div>
+        <div class="container">
+            <div class="containerTextLeft">
+                <div class="activityTitles">El Ski Acuatico</div>
+                <div id="waterSkiText">El ski acuatico es muy practicado en el embalse. Nosotros le proporcionamos los
+                    medios para que lo
+                    pueda realizar y si no sabe, le ensenamos.</div>
+            </div>
+            <div class="containerImage">
+                <img class="activityImage" src="../../Images/aventura_image.JPG" alt="Water Ski Image">
+            </div>
+        </div>
+        <div class="container containerDiffColor">
+            <div class="containerImage">
+                <img class="activityImage" src="../../Images/wakeboarding-min.jpg" alt="Wakeboarding">
+            </div>
+            <div class="containerTextRight">
+                <div class="activityTitles">Wakeboarding</div>
+                <div id="wakeboardText">
+                    ¡Descubre la emoción del wakeboard en nuestro hermoso hotel! Disfruta de instrucción de expertos y
+                    un ambiente familiar. Ya seas principiante o profesional, tenemos tu aventura de wakeboard cubierta.
+                    La seguridad es nuestra prioridad, asegurando una experiencia inolvidable para todos.
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="containerTextLeft">
+                <div class="activityTitles">Trekking y escuriones a la montaña</div>
+                <div id="waterSkiText">Trekking a lugares inhospitos donde no muchas personas conocen, pudiendo
+                    disfrutar del paisaje y de
+                    un buen safari fotografico.</div>
+            </div>
+            <div class="containerImage">
+                <img class="activityImage" src="../../Images/trekking-min.jpg" alt="Water Ski Image">
+            </div>
+        </div>
+        <div class="container containerDiffColor">
+            <div class="containerImage">
+                <img class="activityImage" src="../../Images/pesca-min.jpg" alt="Wakeboarding">
+            </div>
+            <div class="containerTextRight">
+                <div class="activityTitles">Pesca</div>
+                <div id="wakeboardText">
+                    En nuestro establecimiento, tiene la opción de disfrutar de la pesca a su ritmo, cuando lo desee. Ya
+                    sea un experimentado pescador o simplemente busca relajarse junto al agua, nuestro entorno sereno
+                    brinda el escenario perfecto para una experiencia de pesca tranquila.
+                </div>
+            </div>
+        </div>
+        <p id="divider">Actividades Cerca del Hotel:</p>
+        <div class="container">
+            <div class="containerTextLeft">
+                <div class="activityTitles">Cabalgatas</div>
+                <div id="waterSkiText">
+                    Cuando eliges hospedarte con nosotros, abres la puerta a un mundo de aventuras ecuestres a solo
+                    minutos de distancia en Los Reyunos. Disfruta de la belleza escénica y la tranquilidad de montar a
+                    caballo a través de un establecimiento de terceros convenientemente ubicado en las cercanías. Ya
+                    seas un jinete experimentado o un principiante, los pintorescos senderos que rodean nuestra
+                    ubicación ofrecen una oportunidad para conectarte con la naturaleza y crear recuerdos duraderos
+                    durante tu estadía. ¡Súbete a la silla de montar y emprende una excursión a caballo que seguramente
+                    hará que tu visita a Los Reyunos sea realmente inolvidable!
+                </div>
+            </div>
+            <div class="containerImage">
+                <img class="activityImage" src="../../Images/horseback_riding.jpg" alt="Water Ski Image">
+            </div>
+        </div>
+        <div class="container containerDiffColor">
+            <div class="containerImage">
+                <img class="activityImage" src="../../Images/motorbike_bbq.JPG" alt="Wakeboarding">
+            </div>
+            <div class="containerTextRight">
+                <div class="activityTitles">Motorcross</div>
+                <div id="wakeboardText">
+                    Cuando te hospedas con nosotros, la emoción del motocross te espera a solo unos minutos. Aprovecha
+                    la emocionante experiencia ofrecida por un establecimiento cercano de terceros. Ya seas un piloto
+                    experimentado o nuevo en el mundo del motocross, el terreno agreste en nuestras inmediaciones brinda
+                    el escenario perfecto para una aventura llena de adrenalina durante tu estadía.
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $(".mobile-nav i").click(function () {
+                $(".site-nav-menu").toggleClass("mobile-menu");
+            });
+        })
+    </script>
+</body>
+
+</html>

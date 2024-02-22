@@ -1,0 +1,469 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* body {
+    background-color: rgb(222,184,135);
+} */
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    width: 100%;
+    height: 100%;
+    text-transform: uppercase;
+    display: flex;
+    font-size: 15px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 3%;
+    background-color: rgb(222, 184, 135);
+    z-index: 999;
+}
+
+#navbar {
+    font-size: 28px;
+}
+
+#navbar:hover {
+    color: rgb(138, 154, 91);
+    transition: all 0.4s ease 0%;
+}
+
+
+#video__content {
+    width: auto;
+    height: 710px;
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+}
+
+#video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: 710px;
+    filter: brightness(50%);
+    object-fit: cover;
+}
+
+#map__link {
+    height: 750px;
+}
+
+#map__link iframe {
+    width: 100%;
+    height: 100%;
+}
+
+#consultasTitle {
+    padding-bottom: 15px;
+    padding-top: 30px;
+    font-size: 35px;
+}
+
+#line {
+    background-color: rgb(128, 128, 128);
+    border-width: 0;
+    height: 3px;
+    margin-bottom: 50px;
+}
+
+#submitForm {
+    background-color: rgb(138, 154, 91);
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+}
+
+.title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 75px;
+    width: 180px;
+    mix-blend-mode: multiply;
+}
+
+.content {
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 60px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    transition: 0.5s;
+    font-family: 'Snell Roundhand', sans-serif;
+}
+
+.site-logo {
+    float: left;
+    padding: 17px 0px;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+.site-nav-menu {
+    float: right;
+}
+
+.primary-menu {
+    list-style: none;
+}
+
+.primary-menu li {
+    display: inline-block;
+    margin: 21px 5px;
+}
+
+.primary-menu a {
+    color: rgb(255, 255, 255);
+    position: relative;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 15px 10px;
+    transition: .5s;
+}
+
+.primary-menu a:hover,
+.primary-menu .active {
+    color: rgb(138, 154, 91);
+}
+
+.primary-menu li a:hover:after {
+    width: 100%;
+}
+
+.primary-menu li .active:after {
+    width: 100%;
+}
+
+.mobile-nav {
+    float: right;
+    margin: 10px;
+    padding: 10px;
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    outline: none;
+    cursor: pointer;
+}
+
+i {
+    padding-right: 5px;
+}
+
+/* -------------------------- Main Body -------------------------------- */
+
+.main__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    gap: 25px;
+    width: 100%;
+    padding: 7%;
+    background-color: rgb(222, 184, 135);
+}
+
+.main__content {
+    line-height: 20px;
+    padding: 50px 0px;
+    text-align: center;
+    border-top: .0625rem solid rgb(0, 0, 0);
+    border-bottom: .0625rem solid rgb(0, 0, 0);
+}
+
+.main__images {
+    height: 500px;
+}
+
+.imageInicio {
+    height: 100%;
+    width: 100%;
+}
+
+#sec__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    gap: 25px;
+    width: 100%;
+    padding: 7%;
+    background-color: rgb(226, 196, 156);
+}
+
+.sec__images img {
+    height: 100%;
+    width: 100%;
+}
+
+.sec__content {
+    line-height: 20px;
+    text-align: center;
+    padding: 50px 0px;
+    border-top: .0625rem solid rgb(0, 0, 0);
+    border-bottom: .0625rem solid rgb(0, 0, 0);
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+
+.container .title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.container .title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(135deg, rgb(113, 183, 230), rgb(155, 89, 182));
+}
+
+.sub-entry {
+    padding: 45px;
+    float: left;
+    width: 50%;
+    height: 600px;
+    background-color: rgb(226, 196, 156);
+}
+
+.sub-entry img {
+    height: 460px;
+    width: 100%;
+    float: right;
+}
+
+footer {
+    background-color: rgb(128, 128, 128);
+    text-align: center;
+    width: 100%;
+    display: flex;
+    padding-top: 10px;
+}
+
+.footerItem {
+    justify-content: space-around;
+    width: 33%;
+    padding: 25px;
+}
+
+#message {
+    width: 70%;
+    max-width: 100%;
+    height: 10%;
+    max-height: 20%;
+}
+
+/* ---------------------------- Modal --------------------------------- */
+
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: -16%;
+    width: 100%;
+    height: 120%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: rgb(255, 255, 255);
+    margin: 30% auto;
+    padding: 20px;
+    border: 1px solid rgb(136, 136, 136);
+    width: 80%;
+    gap: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.modal-content img {
+    margin-top: 15px;
+    height: 200px;
+    width: 200px;
+}
+
+.close {
+    color: rgb(170, 170, 170);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.redirect-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(138, 154, 91);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.redirect-button:hover {
+    background-color: rgb(111, 126, 64);
+}
+
+::placeholder{
+    font-size: 14px;
+}
+
+@media only screen and (max-width: 1133px) {
+    .site-nav-menu {
+        float: none;
+        position: absolute;
+        background: rgb(111, 78, 55);
+        width: 100%;
+        left: 0;
+        /* top: 11.54em; */
+        top: 173px;
+        padding: 30px 0px 50px 0px;
+        clip-path: circle(0% at 100% 0%);
+        transition: all .8s;
+    }
+
+    .primary-menu li {
+        display: block;
+        margin-left: 40%;
+        text-align: center;
+    }
+
+    .main__images{
+        width: 80%;
+    }
+
+    .mobile-nav {
+        display: block;
+    }
+
+    .mobile-menu {
+        clip-path: circle(90% at 100% 0%);
+    }
+
+    .primary-menu li a:after {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .main {
+        flex-direction: column;
+        padding: 50px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .sub-entry {
+        padding: 0px 24px;
+        float: none;
+        text-align: center;
+        width: 100%;
+        background-color: rgb(226, 196, 156);
+    }
+
+    .sub-entry-image {
+        width: 100%;
+    }
+
+    .sub-entry img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        justify-content: center;
+        float: none;
+    }
+
+    #message {
+        width: 55%;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .main__container {
+        flex-direction: column;
+    }
+
+    #sec__container {
+        flex-direction: column-reverse;
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    footer {
+        text-align: center;
+        width: 100%;
+        display: inline-grid;
+    }
+
+    .footerItem {
+        width: auto;
+    }
+
+    .modal-content {
+        display: flex;
+        width: 100%;
+    }
+
+    .modal-content img {
+        max-width: 100%;
+        margin: 0 auto;
+        /* This centers the image horizontally */
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .modal-content {
+        display: grid;
+    }
+
+    .modal-content img {
+        max-width: 100%;
+        margin: 0 auto;
+        /* This centers the image horizontally */
+    }
+}
