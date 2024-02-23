@@ -1,0 +1,6 @@
+# Los Reyunos
+## About
+
+I embarked on an engaging project to redesign and rebuild a website for a client's hotel in Argentina, aiming to modernize their online presence while enhancing its appeal. The client's unique request was to exclude an online booking feature, favoring telephone reservations to preserve a personal touch in their guest interaction. Leveraging HTML, CSS, and JavaScript, I crafted a site that beautifully balanced aesthetics with user-friendliness, ensuring the hotel's offerings and amenities were front and center. High-quality visuals and detailed descriptions of the hotel's services, from spa to dining, were prioritized to vividly showcase the guest experience.
+
+The project is an ongoing journey of refinement, with the design's first iteration live and open to iterative enhancements based on user feedback and evolving web trends. This process ensures the website not only remains visually engaging and informative but also accessible across various devices. Through this endeavor, I've had the opportunity to push my creative and technical boundaries, contributing significantly to the hotel's marketing strategy and inviting potential guests to explore what the hotel has to offer.
