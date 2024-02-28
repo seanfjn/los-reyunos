@@ -223,7 +223,7 @@ td {
     }
 
     .mobile-menu {
-        clip-path: circle(90% at 100% 0%);
+        clip-path: circle(90% at 100% 10%);
     }
 
     .primary-menu li a:after {

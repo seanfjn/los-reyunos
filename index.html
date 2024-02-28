@@ -6,16 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <title>Apart Hotel Los Reyunos</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/all.css"> -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('#icon').click(function () {
-                $('ul').toggleClass('show');
-            });
-        }); 
-    </script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.js"></script> -->
 </head>
 
 <body>
@@ -24,7 +18,7 @@
             <a href="./index.html"><img src="./Images/Logo/IMG_9215.jpeg" alt=""></a>
         </div>
         <div class="mobile-nav">
-            <i class="fa fa-bars" aria-hidden="true"></i>
+            <i class="fa fa-bars" aria-hidden="true" id="icon"></i>
         </div>
         <div class="site-nav-menu">
             <ul class="primary-menu">
@@ -40,8 +34,9 @@
     </header>
 
     <div id="video__content">
-        <video playsinline autoplay muted loop src="./Images/OpeningVideo.mov" alt="Video of the Area"
-            id="video"></video>
+        <video playsinline autoplay muted loop loading="lazy" alt="Video of the View"
+            id="video" preload="none" poster="./Images/OpeningVideo_lazy.png">
+        </video>
         <div class="content">
             <h1>Bienvenidos al Apart Hotel Los Reyunos</h1>
         </div>
@@ -56,15 +51,15 @@
                 Rafael y se alimenta de las aguas del Rio Diamante.
                 Este rio, proveniente de la Cordillera de Los Andes, también provee agua a otro dique ubicado al pie
                 de la Pre Cordillera llamado Agua del Toro.
-                El Lago los Reynos cubre aproximadamente 750 hectáreas y tiene 17 km. de largo. En él se practica el
+                El Lago los Reyunos cubre aproximadamente 750 hectáreas y tiene 17 km. de largo. En él se practica el
                 esqui, wakeboard, windsurf. canotaje, etc.
                 Camino a Los Reyunos nos encontramos con la Villa 25 de Mayo, considerada un verdadero museo
                 habitado, con caserios de adobe, las ruinas del fuerte
                 San Rafael del Diamante (bastión de la Campana del Desierto) y la Iglesia de Nuestra Señora del
-                Carmen (fundada en 1888), en la actualidad se pueden observar en su</p>
+                Carmen (fundada en 1888; en la actualidad se pueden observar en su interior, algunas reliquias de invalorable significado cultural).</p>
         </div>
         <div class="main__images">
-            <img style="vertical-align: middle" class="imageInicio" src="./Images/mountain_range.jpg" alt="">
+            <img style="vertical-align: middle" class="imageInicio" src="./Images/mountain_range-min.jpg" alt="">
         </div>
     </div>
 
@@ -90,7 +85,7 @@
         <a href="map__link">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.0616905256265!2d-68.71374988450444!3d-34.577305563608725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9679709cef383a89%3A0x961289a14a686443!2sApart%20Hotel%20Los%20Reyunos!5e0!3m2!1sen!2sus!4v1674365643026!5m2!1sen!2sus"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" title="Apart Hotel Los Reyunos"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </a>
     </div>
@@ -108,10 +103,10 @@
 
             <label for="email">E-mail:</label>
             <input type="email" placeholder="ejemplo@gmail.com" name="email" id="email"
-                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" size="30" required /><br><br>
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" size="30" required><br><br>
 
             <label for="dateReservation">Fecha aproximada de reserva:</label>
-            <input type="date" name="dateReservation" rows="4" cols="50" required></input>
+            <input type="date" name="dateReservation" placeholder="DD/MM/YYYY" rows="4" cols="50" required>
             <br>
             <br>
 
@@ -158,9 +153,6 @@
             <img src="./Images/admin_area.jpg" alt="">
         </div>
     </form>
-    <div>
-        <img src="/Images/logo.jpg" class="cutler" alt="">
-    </div>
     </div>
 
     <footer>
@@ -169,16 +161,66 @@
             Reyunos, San
             Rafael, Mendoza,
             Argentina</div>
-        <div class="footerItem"><i class="fa fa-envelope" aria-hidden="true"></i>apartlosreyunos@hotmail.com</div>
+        <div class="footerItem"><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:apartlosreyunos@hotmail.com">apartlosreyunos@hotmail.com</a></div>
     </footer>
-    <script src="app.js" charset="utf-8"></script>
-    <script>
-        $(document).ready(function () {
-            $(".mobile-nav i").click(function () {
-                $(".site-nav-menu").toggleClass("mobile-menu");
-            });
-        })
+    <script defer>
+        // $(document).ready(function () {
+        //     $('#icon').click(function () {
+        //         $('ul').toggleClass('show');
+        //     });
+        // }); 
+        document.addEventListener('DOMContentLoaded', function() {
+            var icon = document.getElementById('icon');
+            if (icon) {
+                icon.addEventListener('click', function() {
+                    var ul = document.querySelector('.primary-menu');
+                    if (ul) {
+                        ul.classList.toggle('show');
+                    } else {
+                        console.error("The <ul> element was not found.");
+                    }
+                });
+            } else {
+                console.error("The element with ID 'icon' was not found.");
+            }
+        });
+
+        // $(document).ready(function () {
+        //     $(".mobile-nav i").click(function () {
+        //         $(".site-nav-menu").toggleClass("mobile-menu");
+        //     });
+        // })
+        document.addEventListener('DOMContentLoaded', function() {
+            var icon = document.querySelector('.mobile-nav i');
+        if (icon) {
+        icon.addEventListener('click', function() {
+            var menu = document.querySelector('.site-nav-menu'); 
+            if (menu) {
+                menu.classList.toggle('mobile-menu'); 
+            } else {
+                console.error("The .site-nav-menu element was not found.");
+            }
+        });
+        } else {
+            console.error("The mobile-nav icon was not found.");
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+            const videoElement = document.getElementById('video');
+            const videoSource = './Images/OpeningVideo.mov';
+    
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        videoElement.src = videoSource;
+                        observer.unobserve(entry.target); 
+                    }
+                });
+            }, { rootMargin: '50px' }); 
+    
+            observer.observe(videoElement);
+        });
     </script>
 </body>
-
 </html>

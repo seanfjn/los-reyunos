@@ -181,26 +181,36 @@ i {
     align-items: center;
     height: auto;
     gap: 25px;
-    width: 100%;
     padding: 7%;
     background-color: rgb(222, 184, 135);
 }
 
+.main__content, .main__images, .sec__content {
+    padding: 20px; 
+}
+
 .main__content {
-    line-height: 20px;
-    padding: 50px 0px;
-    text-align: center;
-    border-top: .0625rem solid rgb(0, 0, 0);
-    border-bottom: .0625rem solid rgb(0, 0, 0);
+    flex: 1 1 40%; 
+    max-width: 700px; 
+    text-align: center; 
+    line-height: 20px; 
+    border-top: .0625rem solid rgb(0, 0, 0); 
+    border-bottom: .0625rem solid rgb(0, 0, 0); 
 }
 
 .main__images {
-    height: 500px;
+    flex: 1 1 60%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-.imageInicio {
-    height: 100%;
-    width: 100%;
+.main__images img {
+    max-width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    object-position: center; 
 }
 
 #sec__container {
@@ -209,7 +219,6 @@ i {
     align-items: center;
     height: auto;
     gap: 25px;
-    width: 100%;
     padding: 7%;
     background-color: rgb(226, 196, 156);
 }
@@ -220,10 +229,11 @@ i {
 }
 
 .sec__content {
-    line-height: 20px;
-    text-align: center;
-    padding: 50px 0px;
-    border-top: .0625rem solid rgb(0, 0, 0);
+    flex: 1 1 40%; 
+    max-width: 700px; 
+    text-align: center; 
+    line-height: 20px; 
+    border-top: .0625rem solid rgb(0, 0, 0); 
     border-bottom: .0625rem solid rgb(0, 0, 0);
 }
 
@@ -352,6 +362,7 @@ footer {
     font-size: 14px;
 }
 
+
 @media only screen and (max-width: 1133px) {
     .site-nav-menu {
         float: none;
@@ -359,12 +370,11 @@ footer {
         background: rgb(111, 78, 55);
         width: 100%;
         left: 0;
-        /* top: 11.54em; */
-        top: 173px;
-        padding: 30px 0px 50px 0px;
+        top: 172px;
+        padding: 30px 0px 50px 20px;
         clip-path: circle(0% at 100% 0%);
         transition: all .8s;
-    }
+    } 
 
     .primary-menu li {
         display: block;
@@ -372,16 +382,12 @@ footer {
         text-align: center;
     }
 
-    .main__images{
-        width: 80%;
-    }
-
     .mobile-nav {
         display: block;
     }
 
     .mobile-menu {
-        clip-path: circle(90% at 100% 0%);
+        clip-path: circle(90% at 100% 10%);
     }
 
     .primary-menu li a:after {
@@ -395,6 +401,16 @@ footer {
         padding: 50px;
         height: auto;
         margin-bottom: 20px;
+    }
+
+    .main__container{
+        gap: 10px;
+    }
+
+    .main__images img{
+        width: 100%;
+        height: auto;
+        object-fit: contain;
     }
 
     .sub-entry {

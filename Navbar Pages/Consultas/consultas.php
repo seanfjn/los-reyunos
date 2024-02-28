@@ -8,9 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $peopleStaying = $_POST["peopleStaying"];
     $hearOfUs = $_POST["hearOfUs"];
     $message = $_POST["message"];
-
-
-    $to = "apartlosreyunos@hotmail.com";
+    $to = "info@losreyunos.net";
     $subject = "Solicitud del cliente";
     $headers = "From: $email";
     
@@ -24,11 +22,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     Nos conoció por: $hearOfUs\n 
     
     \n\nComentarios: $message";
+
+        if (mail($to, $subject, $mailBody, $headers)) {
+            echo "!E-mail ha sido enviado! Serás redirigido en 3 segundos.";
+            echo "<script>setTimeout(function() { window.location.href = 'https://www.losreyunos.net'; }, 3000);</script>";
+        } else {
+            echo "Error sending email: " . error_get_last()['message'];
+        }
     
-    if (mail($to, $subject, $mailBody, $headers)) {
-        echo "Email sent successfully!";
-    } else {
-        echo "Error sending email: " . error_get_last()['message'];
-    }
 }
 ?>
+
