@@ -71,8 +71,8 @@ header {
 }
 
 .logo img {
-    height: 75px;
-    width: 180px;
+    height: 110px;
+    width: 230px;
     mix-blend-mode: multiply;
 }
 
@@ -105,6 +105,7 @@ header {
     font-weight: bold;
     letter-spacing: 1px;
     padding: 15px 10px;
+    font-size: 18px;
     transition: .5s;
 }
 
@@ -176,13 +177,6 @@ td {
     text-align: center;
 }
 
-.logo img {
-    height: 75px;
-    width: 180px;
-    mix-blend-mode: multiply;
-    /* eliminates the white background on image */
-}
-
 .consultasRedirectButton {
     width: 100%;
     text-align: center;
@@ -199,7 +193,7 @@ td {
     margin-top: 20px;
 }
 
-@media only screen and (max-width: 1133px) {
+@media only screen and (max-width: 1280px) {
     .site-nav-menu {
         float: none;
         position: absolute;

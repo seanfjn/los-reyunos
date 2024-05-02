@@ -82,8 +82,8 @@ header {
 }
 
 .logo img {
-    height: 75px;
-    width: 180px;
+    height: 110px;
+    width: 230px;
     mix-blend-mode: multiply;
 }
 
@@ -116,6 +116,7 @@ header {
     font-weight: bold;
     letter-spacing: 1px;
     padding: 15px 10px;
+    font-size: 18px;
     transition: .5s;
 }
 
@@ -209,7 +210,7 @@ i {
     background-color: rgb(226, 196, 156);
 }
 
-@media only screen and (max-width: 1133px) {
+@media only screen and (max-width: 1280px) {
     .site-nav-menu {
         float: none;
         position: absolute;

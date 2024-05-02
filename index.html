@@ -47,11 +47,11 @@
         <div class="main__content">
             <p class="title">Alrededores</p>
             <br>
-            <p id="alredor__text">El lago Los Reyunos se encuentra emplazado a 43 Km. al oeste de la Ciudad de San
+            <p id="alredor__text">El lago Los Reyunos se encuentra emplazado a 40 Km. al oeste de la Ciudad de San
                 Rafael y se alimenta de las aguas del Rio Diamante.
                 Este rio, proveniente de la Cordillera de Los Andes, también provee agua a otro dique ubicado al pie
                 de la Pre Cordillera llamado Agua del Toro.
-                El Lago los Reyunos cubre aproximadamente 750 hectáreas y tiene 17 km. de largo. En él se practica el
+                El Lago los Reyunos cubre aproximadamente 750 hectáreas y tiene 15 km. de largo. En él se practica el
                 esqui, wakeboard, windsurf. canotaje, etc.
                 Camino a Los Reyunos nos encontramos con la Villa 25 de Mayo, considerada un verdadero museo
                 habitado, con caserios de adobe, las ruinas del fuerte
@@ -59,24 +59,31 @@
                 Carmen (fundada en 1888; en la actualidad se pueden observar en su interior, algunas reliquias de invalorable significado cultural).</p>
         </div>
         <div class="main__images">
-            <img style="vertical-align: middle" class="imageInicio" src="./Images/mountain_range-min.jpg" alt="">
+            <img style="vertical-align: middle" class="imageInicio" src="./Images/mountain_range-min.jpeg" alt="">
         </div>
     </div>
 
     <div id="sec__container">
         <div class="main__images">
-            <img style="vertical-align: middle" class="imageInicio" src="./Images/main_patio.jpg" alt="">
+            <img style="vertical-align: middle" class="imageInicio" src="./Images/main_patio.jpeg" alt="">
         </div>
         <div class="sec__content">
             <p class="title">El Apart</p>
             <br>
-            <p id="text2">El Apart Hotel se encunetra a orillas del lago dentro del Club de Nautica y Pesca Los
-                Reyunos, 43km al oeste de la Ciudad de San Rafael.
-                El Lago Cubre aproximadamente 750 hectáreas, tiene 17km de largo y sus aguas son completamente
-                transparentes y de temperatura agradable para banarse.
-                En el Club, tipo country, los socios han construido mas de 70 casas de fin de semana. El mismo
+            <p id="text2">El Apart Hotel se encunetra a orillas del lago, dentro del Club de Nautica y Pesca Los
+                Reyunos. 
+                En el Club, tipo country, los socios han construido mas de 160 casas de fin de semana. El mismo
                 cuenta con campings, pileta de natacion a orillas del lago, y un polideportivo con canchas de
-                basquet, tenis, paddle y volley.
+                basquet, tenis, paddle, volley, y fútbol. El Apart cuenta con: </p>
+                <ul id="text2_ul">
+                    <li class="text2_li">1 departamento para 6 personas con 2 baños. </li>
+                    <li class="text2_li">7 departamentos para 5 personas con 1 baño.</li>
+                    <li class="text2_li">3 departamentos para 3 personas con 1 baño.</li>
+                </ul>
+                <p>
+
+                Todos los departamento tiene cocina equipada con heladera y horno.
+                Incluide tambien la ropa de cama y el uso de canoas y kayak.
             </p>
         </div>
     </div>
@@ -150,7 +157,7 @@
             <input type="submit" value="Send" id="submitForm">
         </div>
         <div class="sub-entry sub-entry-image">
-            <img src="./Images/admin_area.jpg" alt="">
+            <img src="./Images/admin_area.jpeg" alt="">
         </div>
     </form>
     </div>
@@ -161,14 +168,9 @@
             Reyunos, San
             Rafael, Mendoza,
             Argentina</div>
-        <div class="footerItem"><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:apartlosreyunos@hotmail.com">apartlosreyunos@hotmail.com</a></div>
+        <div class="footerItem"><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@losreyunos.net">info@losreyunos.net</a></div>
     </footer>
     <script defer>
-        // $(document).ready(function () {
-        //     $('#icon').click(function () {
-        //         $('ul').toggleClass('show');
-        //     });
-        // }); 
         document.addEventListener('DOMContentLoaded', function() {
             var icon = document.getElementById('icon');
             if (icon) {
@@ -185,11 +187,6 @@
             }
         });
 
-        // $(document).ready(function () {
-        //     $(".mobile-nav i").click(function () {
-        //         $(".site-nav-menu").toggleClass("mobile-menu");
-        //     });
-        // })
         document.addEventListener('DOMContentLoaded', function() {
             var icon = document.querySelector('.mobile-nav i');
         if (icon) {
@@ -207,20 +204,26 @@
     });
 
     document.addEventListener('DOMContentLoaded', (event) => {
-            const videoElement = document.getElementById('video');
-            const videoSource = './Images/OpeningVideo.mov';
-    
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        videoElement.src = videoSource;
-                        observer.unobserve(entry.target); 
-                    }
-                });
-            }, { rootMargin: '50px' }); 
-    
-            observer.observe(videoElement);
+        const videoElement = document.getElementById('video');
+        const videoSource = './Images/OpeningVideo.mov'; 
+
+        videoElement.addEventListener('loadeddata', function() {
+            if (videoElement.readyState >= 3) { 
+                videoElement.play(); 
+            }
         });
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    videoElement.src = videoSource; 
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, { rootMargin: '50px' });
+
+        observer.observe(videoElement);
+    });
     </script>
 </body>
 </html>

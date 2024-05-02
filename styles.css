@@ -97,8 +97,8 @@ header {
 }
 
 .logo img {
-    height: 75px;
-    width: 180px;
+    height: 110px;
+    width: 230px;
     mix-blend-mode: multiply;
 }
 
@@ -116,7 +116,7 @@ header {
 
 .site-logo {
     float: left;
-    padding: 17px 0px;
+    /* padding: 17px 0px; */
 }
 
 .mobile-nav {
@@ -143,6 +143,7 @@ header {
     font-weight: bold;
     letter-spacing: 1px;
     padding: 15px 10px;
+    font-size: 18px;
     transition: .5s;
 }
 
@@ -171,6 +172,10 @@ header {
 
 i {
     padding-right: 5px;
+}
+
+#text2_ul{
+    list-style-position: inside;  
 }
 
 /* -------------------------- Main Body -------------------------------- */
@@ -363,7 +368,7 @@ footer {
 }
 
 
-@media only screen and (max-width: 1133px) {
+@media only screen and (max-width: 1280px) {
     .site-nav-menu {
         float: none;
         position: absolute;

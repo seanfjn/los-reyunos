@@ -1,400 +1,683 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="imagenes.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-  <script>
-    $(document).ready(function () {
-      $('#icon').click(function () {
-        $('ul').toggleClass('show');
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="imagenes.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#icon").click(function () {
+          $("ul").toggleClass("show");
+        });
       });
-    }); 
-  </script>
-</head>
+    </script>
+  </head>
 
-<body>
-  <header>
-    <div class="site-logo logo">
-      <a href="../../index.html"><img src="../../Images/Logo/IMG_9215.jpeg" alt=""></a>
-    </div>
-    <div class="mobile-nav">
-      <i class="fa fa-bars" aria-hidden="true"></i>
-    </div>
-    <div class="site-nav-menu">
-      <ul class="primary-menu">
-        <li><a href="../../index.html">Inicio</a></li>
-        <li><a href="../Comodidades/comodida.html">Comodidades</a></li>
-        <li><a href="../Aventura/aventura.html">Aventura</a></li>
-        <li><a href="../../index.html#map__link">Como Llegar</a></li>
-        <li><a href="../Imagenes/imagenes.html">Imagenes</a></li>
-        <li><a href="../Tarifas/tarifas.html">Tarifas</a></li>
-        <li><a href="../../index.html#consultasTitle">Consultas</a></li>
-      </ul>
-    </div>
-  </header>
+  <body>
+    <header>
+      <div class="site-logo logo">
+        <a href="../../index.html"
+          ><img src="../../Images/Logo/IMG_9215.jpeg" alt=""
+        /></a>
+      </div>
+      <div class="mobile-nav">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </div>
+      <div class="site-nav-menu">
+        <ul class="primary-menu">
+          <li><a href="../../index.html">Inicio</a></li>
+          <li><a href="../Comodidades/comodida.html">Comodidades</a></li>
+          <li><a href="../Aventura/aventura.html">Aventura</a></li>
+          <li><a href="../../index.html#map__link">Como Llegar</a></li>
+          <li><a href="../Imagenes/imagenes.html">Imagenes</a></li>
+          <li><a href="../Tarifas/tarifas.html">Tarifas</a></li>
+          <li><a href="../../index.html#consultasTitle">Consultas</a></li>
+        </ul>
+      </div>
+    </header>
 
-  <div id="video__content">
-    <img id="aventura_image" src="../../Images/panorama-min.jpg" alt="">
-    <div class="content">
-      <h1>Imagenes</h1>
-    </div>
-  </div>
-
-  <div id="myBtnContainer">
-    <button class="btn active" onclick="filterSelection('all')">Mostrar todo</button>
-    <button class="btn" onclick="filterSelection('dock')">Muelle</button>
-    <button class="btn" onclick="filterSelection('view')">Vista</button>
-    <button class="btn" onclick="filterSelection('hotel')">Hotel</button>
-    <button class="btn" onclick="filterSelection('rooms')">Habitaciones</button>
-    <button class="btn" onclick="filterSelection('activities')">Actividades</button>
-    <button class="btn" onclick="filterSelection('videos')">Videos</button>
-  </div>
-
-  <div class="container">
-
-    <div class="filterDiv hotel gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="../../Images/apart_patio.jpg" alt="">
-        </div>
+    <div id="video__content">
+      <img id="aventura_image" src="../../Images/panorama-min.jpeg" alt="" />
+      <div class="content">
+        <h1>Imagenes</h1>
       </div>
     </div>
 
-    <div class="filterDiv videos rooms gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <video playinline autoplay muted loop class="myVideo" src="../../Images/bedroom_video2.mov"></video>
+    <div id="myBtnContainer">
+      <button class="btn active" onclick="filterSelection('all')">
+        Mostrar todo
+      </button>
+      <button class="btn" onclick="filterSelection('dock')">Muelle</button>
+      <button class="btn" onclick="filterSelection('view')">Vista</button>
+      <button class="btn" onclick="filterSelection('hotel')">Hotel</button>
+      <button class="btn" onclick="filterSelection('rooms')">
+        Habitaciones
+      </button>
+      <button class="btn" onclick="filterSelection('activities')">
+        Actividades
+      </button>
+      <button class="btn" onclick="filterSelection('videos')">Videos</button>
+    </div>
+
+    <div class="container">
+      <div class="filterDiv hotel gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../../Images/apart_patio.jpeg" loading="lazy" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv activities gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../../Images/water_skiing.jpeg" loading="lazy" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv activities gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../../Images/boat_ski_jump.jpeg" loading="lazy" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv view gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../../Images/balcony_view.jpeg" loading="lazy" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv activities gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../../Images/canoas.jpeg" loading="lazy" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv dock gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../../Images/dock_empty.jpeg" loading="lazy" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv view gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img
+              src="../../Images/balcony_sunrise.jpeg"
+              loading="lazy"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv view gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img
+              src="../../Images/mountain_range_sunset.jpeg"
+              loading="lazy"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv activities gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img
+              src="../../Images/water_skiing_jump.jpeg"
+              loading="lazy"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv dock gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../../Images/dock_updated.jpeg" loading="lazy" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv activities gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img
+              src="../../Images/rock_formation_water.jpeg"
+              loading="lazy"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv activities gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img
+              src="../../Images/waterfall_image.jpeg"
+              loading="lazy"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv activities view gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../../Images/canoe.jpeg" loading="lazy" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv view gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img
+              src="../../Images/paseos_en_lancha.jpeg"
+              loading="lazy"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv view gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img
+              src="../../Images/mountain_view_green.jpeg"
+              loading="lazy"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv view gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img
+              src="../../Images/mountain_range_sunset.jpeg"
+              loading="lazy"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv view activities gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img
+              src="../../Images/mountain_range_sunrise.jpeg"
+              loading="lazy"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv view gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img
+              src="../../Images/mountain_range_sun.jpeg"
+              loading="lazy"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv view gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img
+              src="../../Images/mountain_range_green.jpeg"
+              loading="lazy"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv view gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img
+              src="../../Images/mountain_range_sky.jpeg"
+              loading="lazy"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv view gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img
+              src="../../Images/mountain_range_morning.jpeg"
+              loading="lazy"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv view gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img
+              src="../../Images/mountain_range_long.jpeg"
+              loading="lazy"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv videos rooms gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <video
+              playinline
+              autoplay
+              muted
+              loop
+              class="myVideo"
+              src="../../Images/bedroom_video2.mov"
+            ></video>
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv hotel gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../../Images/apartment.jpeg" loading="lazy" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv hotel gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../../Images/backyard.jpeg" loading="lazy" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv hotel gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../../Images/backyard_view.jpeg" loading="lazy" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv view gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img
+              src="../../Images/mountain_view_sunet.jpeg"
+              loading="lazy"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv rooms gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../../Images/Bedroom.jpeg" loading="lazy" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv hotel gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../../Images/community_area.jpeg" loading="lazy" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv rooms gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../../Images/living_room.jpeg" loading="lazy" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv dock gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../../Images/dock-again-min.jpeg" loading="lazy" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Started here again -->
+
+      <div class="filterDiv activities gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img
+              src="../../Images/activities.jpeg"
+              loading="lazy"
+              alt="Activities room"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv hotel gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../../Images/admin_area.jpeg" loading="lazy" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv rooms gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../../Images/bed.jpeg" loading="lazy" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv rooms gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../../Images/bathroom.jpeg" loading="lazy" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv rooms gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img
+              src="../../Images/bedroom_double2.jpeg"
+              loading="lazy"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv hotel gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img
+              src="../../Images/bedroom_exterior.jpeg"
+              loading="lazy"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv videos rooms gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <video
+              playinline
+              autoplay
+              muted
+              loop
+              class="myVideo"
+              src="../../Images/bedroom_video.mov"
+            ></video>
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv view activities gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../../Images/boat_view.jpeg" loading="lazy" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv rooms gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../../Images/cabinet-min.jpeg" loading="lazy" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv activities gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img
+              src="../../Images/campfire_gather.jpeg"
+              loading="lazy"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv activities gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../../Images/campfire-min.jpeg" loading="lazy" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv hotel gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img
+              src="../../Images/community_area2.jpeg"
+              loading="lazy"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv dock gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../../Images/dock-again-min.jpeg" loading="lazy" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv view gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../../Images/beer.jpeg" loading="lazy" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv activities gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img
+              src="../../Images/cousin_wakeboard1.jpeg"
+              loading="lazy"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv hotel gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../../Images/main_patio.jpeg" loading="lazy" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv activities gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img
+              src="../../Images/cousin_wakeboard2.jpeg"
+              loading="lazy"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv activities gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img
+              src="../../Images/wakeboarding-min.jpeg"
+              loading="lazy"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv activities gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img
+              src="../../Images/water_skiing_jump_trick.jpeg"
+              loading="lazy"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv room gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../../Images/bedroom_single.jpeg" loading="lazy" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv activities gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img
+              src="../../Images/horseback_riding.jpeg"
+              loading="lazy"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv view gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img
+              src="../../Images/mountain_range-min.jpeg"
+              loading="lazy"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv view gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../../Images/mountain_range.jpeg" loading="lazy" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv dock gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../../Images/pesca-min.jpeg" loading="lazy" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv view gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../../Images/view-min.jpeg" loading="lazy" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv room gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img
+              src="../../Images/bedroom_vertical.jpeg"
+              loading="lazy"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="filterDiv view gallery-container w-3">
+        <div class="gallery-item">
+          <div class="image">
+            <img
+              src="../../Images/balcony_mountain_view.jpeg"
+              loading="lazy"
+              alt=""
+            />
+          </div>
         </div>
       </div>
     </div>
-
-    <div class="filterDiv hotel gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="../../Images/apartment.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <div class="filterDiv hotel gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="../../Images/backyard.jpeg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <div class="filterDiv hotel gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="../../Images/backyard_view.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <div class="filterDiv rooms gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="../../Images/Bedroom.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <div class="filterDiv hotel gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="../../Images/community_area.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <div class="filterDiv rooms gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="../../Images/dining_room-min.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <div class="filterDiv dock gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="../../Images/dock-again-min.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <div class="filterDiv dock gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="../../Images/dock_empty2.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <!-- Started here again -->
-
-    <div class="filterDiv activities gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="../../Images/activities.jpg" alt="Activities room">
-        </div>
-      </div>
-    </div>
-
-    <div class="filterDiv hotel gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="../../Images/admin_area.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <div class="filterDiv rooms gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="../../Images/bed.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <div class="filterDiv rooms gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="../../Images/bathroom.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <div class="filterDiv rooms gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="../../Images/bedroom_double2.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <div class="filterDiv hotel gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="../../Images/bedroom_exterior.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <div class="filterDiv videos rooms gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <video playinline autoplay muted loop class="myVideo" src="../../Images/bedroom_video.mov"></video>
-        </div>
-      </div>
-    </div>
-
-    <div class="filterDiv view gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="../../Images/boat_view.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <div class="filterDiv rooms gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="../../Images/cabinet-min.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <div class="filterDiv activities gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="../../Images/campfire_gather.JPG" alt="">
-        </div>
-      </div>
-    </div>
-
-    <div class="filterDiv rooms gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="../../Images/dining_couches-min.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <div class="filterDiv activities gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="../../Images/campfire-min.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <div class="filterDiv hotel gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="../../Images/community_area2.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <div class="filterDiv hotel gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="../../Images/dining_couches2-min.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <div class="filterDiv dock gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="../../Images/dock-again-min.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <div class="filterDiv rooms gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="../../Images/dining_room-min.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <div class="filterDiv view gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="../../Images/beer.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <div class="filterDiv activities gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="../../Images/cousin_wakeboard1.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <div class="filterDiv hotel gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="../../Images/main_patio.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <div class="filterDiv activities gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="../../Images/cousin_wakeboard2.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <div class="filterDiv activities gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="../../Images/wakeboarding-min.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <div class="filterDiv room gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="../../Images/bedroom_single.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <div class="filterDiv activities gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="../../Images/horseback_riding.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <div class="filterDiv view gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="../../Images/mountain_range-min.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <div class="filterDiv view gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="../../Images/mountain_range.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <div class="filterDiv dock gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="../../Images/pesca-min.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <div class="filterDiv activities gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="../../Images/trekking-min.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <div class="filterDiv view gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="../../Images/view-min.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <div class="filterDiv room gallery-container w-3">
-      <div class="gallery-item">
-        <div class="image">
-          <img src="../../Images/bedroom_vertical.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-
-
-  </div>
-  <script src="imagenes.js" charset="utf-8"></script>
-  <script>
-    $(document).ready(function () {
-      $(".mobile-nav i").click(function () {
-        $(".site-nav-menu").toggleClass("mobile-menu");
+    <script src="imagenes.js" charset="utf-8"></script>
+    <script>
+      $(document).ready(function () {
+        $(".mobile-nav i").click(function () {
+          $(".site-nav-menu").toggleClass("mobile-menu");
+        });
       });
-    })
-  </script>
+    </script>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var mobileNav = document.querySelector(".mobile-nav");
-      var siteNavMenu = document.querySelector(".site-nav-menu");
-      var content = document.querySelector(".content");
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var mobileNav = document.querySelector(".mobile-nav");
+        var siteNavMenu = document.querySelector(".site-nav-menu");
+        var content = document.querySelector(".content");
 
-      mobileNav.addEventListener("click", function () {
-        siteNavMenu.classList.toggle("mobile-menu-active");
-        content.classList.toggle("mobile-menu-active");
+        mobileNav.addEventListener("click", function () {
+          siteNavMenu.classList.toggle("mobile-menu-active");
+          content.classList.toggle("mobile-menu-active");
+        });
       });
-    });
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>
