@@ -359,14 +359,14 @@ footer {
 }
 
 
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1311px) {
     .site-nav-menu {
         float: none;
         position: absolute;
         background: rgb(111, 78, 55);
         width: 100%;
         left: 0;
-        top: 172px;
+        top: 207px;
         padding: 30px 0px 50px 20px;
         clip-path: circle(0% at 100% 0%);
         transition: all .8s;

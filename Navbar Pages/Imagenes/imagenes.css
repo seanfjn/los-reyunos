@@ -186,9 +186,16 @@ button:hover {
 .container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-auto-rows: 100px 300px;
+    /* grid-auto-rows: 100px 300px; */
     grid-gap: 10px;
-    grid-auto-flow: dense;
+    /* grid-auto-flow: dense; */
+    margin: 15px;
+}
+
+.gallery-container{
+    width: 100%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
 }
 
 .gallery-item {
@@ -200,7 +207,7 @@ button:hover {
 .gallery-item .image {
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .rotate_video{
@@ -212,8 +219,8 @@ button:hover {
 .gallery-item .image img {
     width: 100%;
     height: 100%;
-    object-fit:cover;
-    object-position: 50% 50%;
+    object-fit: cover;
+    object-position: center;
     cursor: pointer;
 }
 
@@ -243,14 +250,14 @@ button:hover {
     }
 }
 
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1311px) {
     .site-nav-menu {
         float: none;
         position: absolute;
         background: rgb(111, 78, 55);
         width: 100%;
         left: 0;
-        top: 173px;
+        top: 207px;
         padding: 30px 0px 50px 0px;
         clip-path: circle(0% at 100% 0%);
         transition: all .8s;
