@@ -116,7 +116,7 @@ header {
 
 .site-logo {
     float: left;
-    /* padding: 17px 0px; */
+    padding: 17px 0px;
 }
 
 .mobile-nav {
@@ -190,12 +190,12 @@ i {
     background-color: rgb(222, 184, 135);
 }
 
-.main__content, .main__images, .sec__content {
+.main__content, .main__images{
     padding: 20px; 
 }
 
 .main__content {
-    flex: 1 1 40%; 
+    flex: 1 1 45%; 
     max-width: 700px; 
     text-align: center; 
     line-height: 20px; 
@@ -231,15 +231,6 @@ i {
 .sec__images img {
     height: 100%;
     width: 100%;
-}
-
-.sec__content {
-    flex: 1 1 40%; 
-    max-width: 700px; 
-    text-align: center; 
-    line-height: 20px; 
-    border-top: .0625rem solid rgb(0, 0, 0); 
-    border-bottom: .0625rem solid rgb(0, 0, 0);
 }
 
 .container {
